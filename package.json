@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "env-cmd": "^10.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -13,8 +14,14 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "start:dev": "env-cmd -f .env.development npm run start",
+    "start:prod": "env-cmd -f .env.production npm run start",
     "build": "react-scripts build",
+    "build:dev": "env-cmd -f .env.development npm run build",
+    "build:prod": "env-cmd -f .env.production npm run build",
     "test": "react-scripts test",
+    "test:dev": "env-cmd -f .env.development npm run test",
+    "test:prod": "env-cmd -f .env.production npm run test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
